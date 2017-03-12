@@ -1,0 +1,31 @@
+@import "libs/_burger";
+@import "./bower_components/sassy-inputs/sass/main";
+@import "./bower_components/pineapple-sass/build/_pineapple-sass";
+
+body {
+  background-color: grey;
+}
+
+.intro {
+  text-align: center;
+  background: url(../images/screenshot.png) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-top: -1.5em;
+}
+
+.head{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #F6861F;
+  padding-top: 20em;
+
+}
+
+h1 {
+  background: rgba(white, 0.7);
+  padding: 1em;
+  font-weight: bold;
+}
