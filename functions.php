@@ -73,21 +73,16 @@ add_filter( 'excerpt_more', 'crude_excerpt_more' );
 function crude_scripts() {
 
 	//Load main stylesheets
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css' );
-	//wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.min.css' ); //ACTIVATE this once finished dev
-
 	//---------------------------------------------------
-	wp_enqueue_style( 'raw-css', get_template_directory_uri() . '/assets/raw/css/main.css' ); //delete this once finished dev
+	wp_enqueue_style( 'css', get_template_directory_uri() . '/assets/bundles/main.min.css' ); //delete this once finished dev
 	//---------------------------------------------------
 
 	wp_enqueue_style( 'crude-style', get_stylesheet_uri() );
 
 	//Load scripts
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), true );
-	//wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.min.js', true ); //ACTIVATE this once finished dev
-
+	
 	//---------------------------------------------------
-	wp_enqueue_script( 'raw-js', get_template_directory_uri() . '/assets/raw/js/main.js', true ); //delete this once finished dev
+	wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/bundles/main.min.js', true ); //delete this once finished dev
 	//---------------------------------------------------
 
 }
