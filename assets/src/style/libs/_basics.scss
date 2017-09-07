@@ -1,0 +1,219 @@
+.text-white {
+    color: #fff !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-extra-bold {
+    font-weight: 800;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-regular {
+    font-size: 1em;
+}
+
+.text-small {
+    font-size: 0.8em;
+}
+
+.text-large {
+    font-size: 1.5em;
+}
+
+.text-extra-large {
+    font-size: 2em;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin {
+    margin: 1em;
+}
+
+.margin-top-bottom-small {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.margin-top-bottom {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.margin-bottom {
+    margin-bottom: 2em;
+}
+
+.margin-top {
+    margin-top: 2em;
+}
+
+.margin-right {
+    margin-right: 0.3em;
+}
+
+.margin-left {
+    margin-left: 0.3em;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.padding-top-bottom-xs {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.padding-top-bottom-small {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.padding-top-bottom-large {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.padding-small {
+    padding: 0.5em;
+}
+
+.padding {
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.padding-bottom {
+    padding-bottom: 0.5em;
+}
+
+.padding-right {
+    padding-right: 0.5em;
+}
+
+.padding-left {
+    padding-left: 8em;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.no-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+
+/************ Display properties ***************/
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-middle {
+    justify-content: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-left {
+    align-items: flex-start;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-top {
+    justify-content: flex-start;
+}
+
+.flex-bottom {
+    justify-content: flex-end;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-stretch {
+    align-items: stretch;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.clear-both {
+    clear: both !important;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.padding-left-small {
+    padding-left: 1em;
+    box-sizing: border-box;
+}
