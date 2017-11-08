@@ -7,7 +7,7 @@ get_header(); ?>
 
 <div class="intro">
 	<div class="head">
-		<h1>CRUDE starter theme by ICS Creative Agency</h1>
+		<h1>CRUDE starter theme</h1>
 	</div>
 </div>
 
