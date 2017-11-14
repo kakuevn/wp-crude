@@ -12,34 +12,43 @@ module.exports = {
 
     module: {
         rules: [{
-            test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [{
-                    loader: 'css-loader',
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                minimize: true,
+                                url: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
+                        }
+                    ]
+                })
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
                     options: {
-                        minimize: true,
-                        url: true
+                        presets: ['babel-preset-es2015']
                     }
-                },
-                {
-                    loader: 'sass-loader'
                 }
-                ]
-            })
-        },
+            },
 
-        {
-            test: /\.(eot|svg|ttf|woff|woff2)$/,
-            loader: 'file-loader?name=assets/fonts/[name].[ext]'
-        }
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=assets/fonts/[name].[ext]'
+            }
         ]
     },
-
-    devServer: {
-        contentBase: path.join(__dirname, "/"),
-        compress: true,
-        port: 4000
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+        }
     },
 
     plugins: [
