@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div>
-	<h1>CRUDE starter theme by ICS Creative Agency</h1>
+	<h1>CRUDE starter theme by Kakuev.com</h1>
 </div>
 
 <?php get_footer();
