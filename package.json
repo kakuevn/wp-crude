@@ -4,7 +4,7 @@
   "description": "CRUDE - WP Starter Theme",
   "main": "main.js",
   "scripts": {
-    "dev": "webpack --watch",
+    "dev": "webpack --watch --mode development",
     "build": "webpack --mode production"
   },
   "author": "Kakuev.com",
@@ -22,6 +22,7 @@
     "postcss": "^7.0.26",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.1",
     "style-loader": "^1.1.2",
     "tailwindcss": "^1.1.4",
     "webpack": "^4.41.5",
