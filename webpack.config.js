@@ -1,71 +1,67 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path')
 
 module.exports = {
-    entry: './assets/src/js/main.js',
-    output: {
-        path: path.resolve(__dirname, 'assets/bundles'),
-        filename: '[name].min.js',
-        publicPath: '/assets/bundles/',
-    },
-
-    module: {
-        rules: [{
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [{
-                            loader: 'css-loader',
-                            options: {
-                                minimize: true,
-                                url: true
-                            }
-                        },
-                        {
-                            loader: 'sass-loader'
-                        }
-                    ]
-                })
+  entry: './assets/src/js/main.js',
+  output: {
+    path: path.resolve(__dirname, 'assets/bundles'),
+    filename: '[name].min.js',
+    publicPath: '/assets/bundles/',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it uses publicPath in webpackOptions.output
+              publicPath: '../',
+              hmr: process.env.NODE_ENV === 'development',
             },
-            {
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['babel-preset-es2015']
-                    }
-                }
+          },
+          'css-loader',
+        ],
+      },
+    ],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader", },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+                require('postcss-nested'),
+              ],
             },
-
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=assets/fonts/[name].[ext]'
-            }
+          }
         ]
-    },
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
-    },
-
-    plugins: [
-        new ExtractTextPlugin({
-            filename: '[name].min.css',
-            disable: false
-        }),
-
-        // new UglifyJSPlugin({
-
-        //     uglifyOptions: {
-        //         ecma: 8,
-        //         compress: {
-        //             warnings: false
-        //         },
-        //         warnings: false
-        //     }
-        // })
-    ]
-};
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "main.min.css"
+    })
+  ],
+}
