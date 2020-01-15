@@ -1,14 +1,14 @@
 {
-  "name": "dr-victoria-sd",
-  "version": "1.0",
-  "description": "Dr. Victoria Style Dent Theme",
+  "name": "crude",
+  "version": "3.0",
+  "description": "CRUDE - WP Starter Theme",
   "main": "main.js",
   "scripts": {
     "dev": "webpack --watch",
     "build": "webpack --mode production"
   },
   "author": "Kakuev.com",
-  "license": "Dr. Victoria Style Dent",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
